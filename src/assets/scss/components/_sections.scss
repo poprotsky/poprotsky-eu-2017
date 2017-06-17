@@ -1,5 +1,6 @@
 .section {
     padding: 150px 0;
+    background-color: $white;
     @include max-screen($md-max) {
         padding: 100px 0;
     }

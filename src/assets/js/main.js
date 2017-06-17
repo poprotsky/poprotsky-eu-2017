@@ -138,6 +138,12 @@ $(document).ready(function(){
 	
 });
 
+$(window).scroll(function(){
+    $('.heading__content').css('opacity', 1 - $(window).scrollTop() / 300);
+
+    $('.heading--large .heading__content, .scroll-down').css('opacity', 1 - $(window).scrollTop() / 500);
+});
+
 $(window).on('load', function(){
 
 });
