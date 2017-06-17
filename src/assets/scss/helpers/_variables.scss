@@ -1,0 +1,123 @@
+// 
+// body
+// 
+
+// colors
+$key-color-1: #39c81d;
+$key-color-2: #29445a;
+$default-font-color: #000;
+$heading-color: #000;
+$bg-color-body: #FFF;
+
+// standard colors
+$color-accept: #2ecc71;
+$color-decline: #e74c3c;
+
+// font
+$default-font-family: 'Roboto', sans-serif;
+$default-font-weight: 400;
+$default-font-weight-bold: 700;
+$default-font-size: 16px; 
+$default-lead-font-size: 18px;
+// icons
+$default-font-family-icon: 'ico-default';
+$project-font-family-icon: 'Icons';
+
+// list
+$list-li-font-family: $default-font-family-icon;
+$list-li-icon-content: '\e020';
+$list-li-icon-size: 13px;
+$list-li-icon-color: $key-color-1;
+$list-li-icon-top: 2px;
+$list-li-icon-right: 5px;
+$list-li-icon-bottom: 5px;
+$list-li-icon-left: 0;
+
+// line-height
+$default-line-height: 1.35;
+
+// radius
+$default-radius: 3px;
+
+// margin/padding
+$clear-padding: 0;
+$clear-margin: 0;
+$default-padding: 0 0 25px;
+$default-margin: 0 0 25px;
+$default-margin-bottom: 25px;
+$list-li-padding: 0 0 0 20px;
+$list-li-margin: 0 0 10px;
+$list-sub-margin: 10px 0 0;
+
+// links
+$link-color: $key-color-1;
+$link-color-hover: lighten($key-color-1, 15%);
+$link-weight: $default-font-weight;
+
+// ::selection 
+$selection-bg-color: lighten($key-color-1, 20%);
+$selection-color: #fff;
+
+//
+// heading
+//
+$heading-weight: 300 !default;
+$heading-line-height: 1.25;
+$heading-margin: 0 0 25px !default;
+
+// h1
+$heading-1-size: 36px !default;
+$heading-1-weight: $heading-weight;
+$heading-1-margin: $heading-margin;
+$heading-1-color: $heading-color;
+$heading-1-line-height: $heading-line-height;
+
+// h2
+$heading-2-size: 30px !default;
+$heading-2-weight: $heading-weight;
+$heading-2-margin: $heading-margin;
+$heading-2-color: $heading-color;
+$heading-2-line-height: $heading-line-height;
+
+// h3
+$heading-3-size: 26px !default;
+$heading-3-weight: $heading-weight;
+$heading-3-margin: $heading-margin;
+$heading-3-color: $heading-color;
+$heading-3-line-height: $heading-line-height;
+
+// h4
+$heading-4-size: 24px !default;
+$heading-4-weight: $heading-weight;
+$heading-4-margin: $heading-margin;
+$heading-4-color: $heading-color;
+$heading-4-line-height: $heading-line-height;
+
+// h5
+$heading-5-size: 22px !default;
+$heading-5-weight: $heading-weight;
+$heading-5-margin: $heading-margin;
+$heading-5-color: $heading-color;
+$heading-5-line-height: $heading-line-height;
+
+// h6
+$heading-6-size: 20px !default;
+$heading-6-weight: $heading-weight;
+$heading-6-margin: $heading-margin;
+$heading-6-color: $heading-color;
+$heading-6-line-height: $heading-line-height;
+
+// 
+// MEDIA QUERIES
+// 
+$xxs-max: 479px;
+$xs-min: 480px;
+$xs-max: 767px;
+$sm-min: 768px;
+$sm-max: 991px;
+$md-min: 992px;
+$md-max: 1199px;
+$lg-min: 1200px;
+$lg-max: 1679px;
+
+$fullhd-limiter: 1920px;

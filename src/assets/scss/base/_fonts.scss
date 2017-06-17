@@ -1,0 +1,192 @@
+// 
+// PROJECT ICONS
+// 
+
+@font-face {
+  font-family: $project-font-family-icon;
+  src:  url('../fonts/icomoon.eot?c9lpec');
+  src:  url('../fonts/icomoon.eot?c9lpec#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?c9lpec') format('truetype'),
+    url('../fonts/icomoon.woff?c9lpec') format('woff'),
+    url('../fonts/icomoon.svg?c9lpec#Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ico {
+  font-family: $project-font-family-icon !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-pinterest:before {
+  content: "\e914";
+}
+.ico-chevron-right:before {
+  content: "\e912";
+}
+.ico-chevron-left:before {
+  content: "\e913";
+}
+.ico-file:before {
+  content: "\e90f";
+}
+.ico-search-plus:before {
+  content: "\e910";
+}
+.ico-search:before {
+  content: "\e911";
+}
+.ico-arrow-right:before {
+  content: "\e90c";
+}
+.ico-arrow-down:before {
+  content: "\e90d";
+}
+.ico-arrow-up:before {
+  content: "\e90e";
+}
+.ico-arrow-left:before {
+  content: "\e90b";
+}
+.ico-circle-plus:before {
+  content: "\e900";
+}
+.ico-circle-minus:before {
+  content: "\e901";
+}
+.ico-shield:before {
+  content: "\e902";
+}
+.ico-cart:before {
+  content: "\e903";
+}
+.ico-box:before {
+  content: "\e904";
+}
+.ico-mail:before {
+  content: "\e905";
+}
+.ico-marker:before {
+  content: "\e906";
+}
+.ico-facebook-logo:before {
+  content: "\e907";
+}
+.ico-instagram-logo:before {
+  content: "\e908";
+}
+.ico-twitter-logo:before {
+  content: "\e909";
+}
+.ico-youtube-logo:before {
+  content: "\e90a";
+}
+
+
+// 
+// DEFAULT ICONS
+// 
+
+@font-face {
+  font-family: $default-font-family-icon;
+  src:
+    url('../fonts/ico-default.ttf?673vtl') format('truetype'),
+    url('../fonts/ico-default.woff?673vtl') format('woff'),
+    url('../fonts/ico-default.svg?673vtl#ico-default') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ico-default {
+  font-family: $default-font-family-icon !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-default-email:before {
+  content: "\e000";
+}
+.ico-default-phone:before {
+  content: "\e001";
+}
+.ico-default-mobile-phone:before {
+  content: "\e002";
+}
+.ico-default-file:before {
+  content: "\e003";
+}
+.ico-default-search:before {
+  content: "\e004";
+}
+.ico-default-info-label:before {
+  content: "\e005";
+}
+.ico-default-warning-label:before {
+  content: "\e006";
+}
+.ico-default-danger-label:before {
+  content: "\e007";
+}
+.ico-default-success-label:before {
+  content: "\e008";
+}
+.ico-default-basket:before {
+  content: "\e009";
+}
+.ico-default-cross:before {
+  content: "\e010";
+}
+.ico-default-star:before {
+  content: "\e011";
+}
+.ico-default-basket-alt:before {
+  content: "\e012";
+}
+.ico-default-user:before {
+  content: "\e013";
+}
+.ico-default-arrow:before {
+  content: "\e014";
+}
+.ico-default-arrow-bold:before {
+  content: "\e015";
+}
+.ico-default-chevron-thin-up:before {
+  content: "\e016";
+}
+.ico-default-chevron-thin-right:before {
+  content: "\e017";
+}
+.ico-default-chevron-thin-left:before {
+  content: "\e018";
+}
+.ico-default-chevron-thin-down:before {
+  content: "\e019";
+}
+.ico-default-chevron-right:before {
+  content: "\e020";
+}
+.ico-default-chevron-left:before {
+  content: "\e021";
+}
+.ico-default-chevron-down:before {
+  content: "\e022";
+}
+.ico-default-chevron-up:before {
+  content: "\e023";
+}

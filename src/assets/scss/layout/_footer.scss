@@ -1,0 +1,19 @@
+.footer {
+	background-color: #29445a;
+	color: #FFF;
+	font-size: 14px;
+	padding: 30px 0;
+	
+	p {
+		margin-bottom: 0;
+	}
+	
+	&__copy {
+		margin-right: 30px;
+		padding: 3px 0;
+	}
+	
+	&__create {
+		padding: 3px 0;
+	}
+}
