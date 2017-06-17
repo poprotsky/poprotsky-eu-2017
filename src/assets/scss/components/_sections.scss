@@ -1,0 +1,83 @@
+.section {
+    padding: 150px 0;
+    @include max-screen($md-max) {
+        padding: 100px 0;
+    }
+    @include max-screen($sm-max) {
+        padding: 70px 0;
+    }
+    @include max-screen($xs-max) {
+        padding: 50px 0;
+    }
+
+    &--gray {
+        background-color: $gray;
+    }
+    &--border-bottom {
+        border-bottom: 2px solid $gray;
+    }
+
+    &__left-part {
+        padding-right: 70px;
+        @include max-screen($xlg-max) {
+            padding-right: 30px;
+        }
+        @include max-screen($lg-max) {
+            padding-right: 0;
+        }
+        .list {
+            > li {
+                @include max-screen($md-max) {
+                    margin-bottom: 50px !important;
+                }
+                @include max-screen($sm-max) {
+                    margin-bottom: 30px !important;
+                }
+            }
+        }
+    }
+    &__right-part {
+        padding-right: 70px;
+        @include max-screen($xlg-max) {
+            padding-right: 30px;
+        }
+        @include max-screen($lg-max) {
+            padding-right: 0;
+        }
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        @extend .h2;
+        margin-bottom: 0;
+    }
+    &__subtitle {
+        position: relative;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 300;
+        color: $default-font-color;
+        margin-bottom: 50px;
+        &[href] {
+            @include hover() {
+                &::before {
+                    background-color: $black;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left:0;
+                right:0;
+                height: 1px;
+                background-color: rgba($key-color-2, .3);
+                @include transition();
+            }   
+        }
+    }
+}

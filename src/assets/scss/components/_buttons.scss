@@ -4,7 +4,7 @@
 //
 // .btn-group
 //
-$btn-group--margin: 0 -5px 30px;
+$btn-group--margin: 0 -5px;
 $btn-group--btn-margin: 5px;
 
 
@@ -19,22 +19,22 @@ $btn-padding-bottom: 15px;
 $btn-padding-left: 30px;
 
 $btn-text-align: center;
-$btn-text-transform: initial;
-$btn-line-height: 1.2;
-$btn-letter-spacing: initial;
+$btn-text-transform: uppercase;
+$btn-line-height: 1;
+$btn-letter-spacing: 1px;
 
-$btn-font-size: $default-font-size;
+$btn-font-size: 13px;
 $btn-font-family: $default-font-family;
-$btn-font-weight: $default-font-weight;
+$btn-font-weight: 500;
 
-$btn-color: #fff;
-$btn-color--hover: #fff;
+$btn-color: $black;
+$btn-color--hover: $white;
 
-$btn-bg-color: $key-color-2;
-$btn-bg-color--hover: $key-color-1;
+$btn-bg-color: transparent;
+$btn-bg-color--hover: $black;
 
-$btn-border: 2px solid transparent;
-$btn-border--hover: $btn-border;
+$btn-border: 2px solid $black;
+$btn-border--hover: 2px solid transparent;
 $btn-border-radius: 0;
 
 

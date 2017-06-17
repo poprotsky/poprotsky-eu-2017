@@ -1,19 +1,64 @@
-.footer {
-	background-color: #29445a;
-	color: #FFF;
-	font-size: 14px;
-	padding: 30px 0;
-	
-	p {
-		margin-bottom: 0;
+.main-footer {
+	background-color: $black;
+	padding: 120px 0 50px;
+	@include max-screen($md-max) {
+		padding: 100px 0 40px;
 	}
-	
-	&__copy {
-		margin-right: 30px;
-		padding: 3px 0;
+	@include max-screen($sm-max) {
+		padding: 70px 0 40px;
 	}
-	
-	&__create {
-		padding: 3px 0;
+	@include max-screen($xs-max) {
+		padding: 50px 0 30px;
+	}
+	&__nav {
+		&-title {
+			@extend .h4;
+			display: block;
+			color: $white;
+			a {
+				font-size: 16px;
+				margin-left: 15px;
+			}
+		}
+		.list {
+			margin-bottom: 110px;
+			@include max-screen($md-max) {
+				margin-bottom: 90px;
+			}
+			@include max-screen($sm-max) {
+				margin-bottom: 60px;
+			}
+			@include max-screen($xs-max) {
+				margin-bottom: 40px;
+			}
+		}
+		a {
+			color: rgba($white, .4);
+			@include hover() {
+				color: $white;
+			}
+		}
+	}
+	&__copyright {
+		@extend .flex, .flex--center-y, .flex--nowrap;
+		p {
+			margin-bottom: 0;
+			font-size: 16px;
+			color: rgba($white, .4);
+			@include max-screen($xs-max) {
+				font-size: 14px;
+			}
+		}
+		a {
+			flex: 0 0 auto;
+			display: block;
+			width: 40px;
+			height: 40px;
+			margin-right: 30px;
+			img {
+				width: inherit;
+				height: inherit;
+			}
+		}
 	}
 }

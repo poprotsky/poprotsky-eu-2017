@@ -1,12 +1,12 @@
 /*!
-Project: Iguana default front-end template;
-Authors: Mariusz Gałka, Damian Bonar, Eugeniusz Poprocki;
-Company: Iguana Sp. z o.o.;
+Project: Poprotsky.eu;
+Authors: Eugene Poprotsky;
+Company: Poprotsky | Eugeniusz Poprocki;
 
-Created date: 2016-10-18; 
-Last update date: 2017-05-23;
+Created date: 2017-06-17; 
+Last update date: 2017-06-17;
 
-Version: 0.9;
+Version: 0.1;
 */
 
 @import
@@ -15,8 +15,6 @@ Version: 0.9;
     'vendors/_flexboxgrid.scss',
     'vendors/_media-queries.scss',
     'vendors/_fancybox.scss',
-	'vendors/_jcf.scss',
-	'vendors/owl/_owl.carousel.scss',
     
     'helpers/_mixins.scss',
     'helpers/_helpers.scss',
@@ -26,21 +24,23 @@ Version: 0.9;
     'base/_fonts.scss',
     
 	'components/_alerts.scss',
+    'components/_animations.scss',
 	'components/_buttons.scss',
-	'components/_files.scss',
 	'components/_forms.scss',
-	'components/_galleries.scss',
-	'components/_lists.scss',
-    'components/_maps.scss',
     'components/_paginations.scss',
-	'components/_sliders.scss',
-    'components/_wysiwyg.scss',
+    'components/_headings.scss',
+    'components/_sections.scss',
+    'components/_lists.scss',
 	 
 	'layout/_grid.scss',
-	'layout/_breadcrumbs.scss', 
     'layout/_header.scss',
     'layout/_footer.scss',
 	  
-	'pages/_common.scss'; 
+	'pages/_common.scss',
+    'pages/_about.scss',
+    'pages/_services.scss',
+    'pages/_testimonials.scss',
+    'pages/_portfolio.scss',
+    'pages/_contact.scss'; 
 	 
 	

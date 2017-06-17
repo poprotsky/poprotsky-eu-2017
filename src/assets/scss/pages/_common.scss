@@ -1,7 +1,34 @@
 .lead {
 	font-size: $default-lead-font-size;
+    line-height: 1.4;
 }
 
-.section {
-	padding: 30px 0;
+.container {
+    @include max-screen($xs-max) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom:10vh;
+    left:0;
+    z-index: 9;
+    color: rgba($white, .5);
+    font-size: 18px;
+    animation: scroll-down 1.3s ease infinite;
+    @include hover() {
+        color: $white;
+    }
+    .ico {
+        margin-right: 15px;
+        &::before {
+            display: inline-flex;
+            transform: rotate(90deg);
+            font-size: 14px;
+            width: 14px;
+            height: 14px;
+        }
+    }
 }

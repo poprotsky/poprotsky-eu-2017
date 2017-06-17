@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "Poprotsky.eu",
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
@@ -19,9 +19,9 @@
     "imagemin-jpegtran": "^5.0.2",
     "postcss-pxtorem": "^4.0.0"
   },
-  "author": "IguanaStudio",
+  "author": "Eugene Poprotsky",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/IguanaStudio/html-scss-template.git"
+    "url" : "https://poprotsky@bitbucket.org/poprotsky/poprotsky.eu.git"
   }
 }

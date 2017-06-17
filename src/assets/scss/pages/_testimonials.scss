@@ -1,0 +1,12 @@
+.testimonials-page {
+    .heading {
+        background-image: url('../img/testimonials-img.jpg');
+    }
+    .section {
+        &__subtitle {
+            @include max-screen($sm-max) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

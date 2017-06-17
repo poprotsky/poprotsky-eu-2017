@@ -28,9 +28,8 @@ body {
     padding: $clear-padding;
     position: relative;
     -webkit-appearance: none;
-    background: $bg-color-body;
+    background-color: #fff;
     @include transition(padding-top);
-	padding-top: 135px;
 }
 
 h1,
