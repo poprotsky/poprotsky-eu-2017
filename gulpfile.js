@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 
     paths = {
         src: {
-            html: 'src/*.html',
+            html: 'src/**/*.html',
             scss: 'src/assets/scss/**/*.scss',
             css: 'src/assets/css/*.min.css',
             css_dest: 'src/assets/css',
@@ -23,7 +23,8 @@ var gulp = require('gulp'),
             scripts: 'src/assets/js/*.min.js',
             fonts: 'src/assets/fonts/*',
             images: 'src/assets/img/**/*',
-            video: 'src/assets/video/*'
+            video: 'src/assets/video/*',
+            projects: 'src/projects/**/*'
         },
         dist: {
             html: 'dist',
@@ -32,12 +33,7 @@ var gulp = require('gulp'),
             fonts: 'dist/assets/fonts',
             images: 'dist/assets/img',
             video: 'dist/assets/video',
-        },
-		public: {
-            styles: '../../public/assets/css',
-            scripts: '../../public/assets/js',
-            fonts: '../../public/assets/fonts',
-            images: '../../public/assets/img'
+            projects: 'dist/projects'
         }
     };
 
@@ -85,25 +81,10 @@ gulp.task('build', ['clean', 'scss-to-css', 'vendor-scripts', 'main-js'], functi
 
     var video = gulp.src(paths.src.video)
         .pipe(gulp.dest(paths.dist.video));
+
+    var projects = gulp.src(paths.src.projects)
+        .pipe(gulp.dest(paths.dist.projects));
 });
-
-
-// public
-gulp.task('public', ['scss-to-css', 'vendor-scripts', 'main-js'], function(){
-    var css = gulp.src(paths.src.css)
-        .pipe(gulp.dest(paths.public.styles));
-
-    var js = gulp.src(paths.src.scripts)
-        .pipe(gulp.dest(paths.public.scripts));
-
-    var fonts = gulp.src(paths.src.fonts)
-        .pipe(gulp.dest(paths.public.fonts));
-
-    var imgs = gulp.src(paths.src.images)
-        .pipe(gulp.dest(paths.public.images));
-});
-
-
 
 //
 // STYLES

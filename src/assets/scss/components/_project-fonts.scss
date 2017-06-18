@@ -1,0 +1,24 @@
+.fonts {
+    > * {
+        font-family: inherit;
+        font-weight: inherit;
+    }
+    &--lato {
+        font-family: 'Lato', 'Ubuntu', sans-serif; 
+        &-regular {
+            font-weight: 400;
+        }
+        &-bold {
+            font-weight: 700;
+        }
+    }
+    &--signika {
+        font-family: 'Signika', 'Ubuntu', sans-serif;
+        &-light {
+            font-weight: 300; 
+        }
+        &-bold {
+            font-weight: 700;
+        }
+    }
+}

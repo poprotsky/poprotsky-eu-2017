@@ -4,9 +4,9 @@ Authors: Eugene Poprotsky;
 Company: Poprotsky | Eugeniusz Poprocki;
 
 Created date: 2017-06-17; 
-Last update date: 2017-06-17;
+Last update date: 2017-06-18;
 
-Version: 0.1;
+Version: 0.2;
 */
 
 @import
@@ -31,6 +31,9 @@ Version: 0.1;
     'components/_headings.scss',
     'components/_sections.scss',
     'components/_lists.scss',
+    'components/_projects-item.scss',
+    'components/_project-fonts.scss',
+    'components/_project-colors.scss',
 	 
 	'layout/_grid.scss',
     'layout/_header.scss',
@@ -41,6 +44,7 @@ Version: 0.1;
     'pages/_services.scss',
     'pages/_testimonials.scss',
     'pages/_portfolio.scss',
+    'pages/_project.scss',
     'pages/_contact.scss'; 
 	 
 	

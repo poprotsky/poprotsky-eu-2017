@@ -3,7 +3,6 @@
     > li {
         flex: 0 0 50%;
         margin-bottom: 10px;
-        padding-right: 30px;
         @include max-screen($xs-max) {
             flex: 0 0 100%;
         }
@@ -24,23 +23,45 @@
     // 
     // used only list--alt
     &__title {
-        display: block;
+        display: inline-block;
         @extend .h2;
         margin-bottom: 0;
     }
     // used only list--alt
     &__subtitle {
-        display: block;
+        position: relative;
+        display: inline-block;
         color: $default-font-color;
         font-size: 24px;
         font-weight: 300;
+        &[href] {
+            @include hover() {
+                &::before {
+                    background-color: $black;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left:0;
+                right:0;
+                height: 1px;
+                background-color: rgba($key-color-2, .3);
+                @include transition();
+            }   
+        }
     }
     &--alt {
         > li {
+            @extend .flex, .flex--column;
             margin-bottom: 80px;
             @include max-screen($xs-max) {
                 margin-bottom: 50px;
             }
+            &.list__item-x2 {
+                flex: 0 0 100%;
+            } 
             &:nth-last-child(2),
             &:last-child {
                 margin-bottom: 0;
@@ -56,6 +77,63 @@
         .list__title,
         .list__subtitle {
             font-size: 20px;
+        }
+    }
+    // fonts
+    &--fonts {
+        .list__title {
+            margin-bottom: 30px;
+            @include screen($lg-min, $lg-max) {
+                margin-bottom: 15px;
+            }
+            @include max-screen($xs-max) {
+                margin-bottom: 15px;
+            }
+        }
+        .list__subtitle {
+            font-size: 18px;
+            span {
+                @include screen($lg-min, $lg-max) {
+                    font-size: 15px;
+                }
+                @include max-screen($xs-max) {
+                    font-size: 15px;
+                }
+            }
+        } 
+    }
+    // colors
+    &--colors {
+        > li {
+            @extend .flex, .flex--center;
+            flex: 0 0 80px;
+            height: 80px;
+            border-radius: 80px;
+            margin-right: 30px;
+            margin-top: 30px;
+            box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.07);
+            @include transition();
+            @include max-screen($xs-max) {
+                flex-basis: 70px;
+                height: 70px;
+                margin-right: 15px;
+                margin-top: 15px;
+            }
+            @include hover() {
+                transform: scale(1.2);
+                span {
+                    opacity: 1;
+                }
+            }
+            span {
+                color: $white;
+                font-size: 14px;
+                opacity: 0;
+                @include transition();
+                &.black {
+                    color: $black;
+                }
+            }
         }
     }
 }

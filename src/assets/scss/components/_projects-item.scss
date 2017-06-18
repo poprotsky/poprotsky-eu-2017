@@ -1,0 +1,98 @@
+.projects {
+    @extend .flex;
+    background-color: $white;
+    &__item {
+        @extend .flex, .flex--center-x, .flex--end-y;
+        position: relative;
+        flex: 0 0 50%;
+        padding: 12.5% 0;
+        min-height: 400px;
+        overflow: hidden;
+        @include max-screen($md-max) {
+            min-height: 350px;
+        }
+        @include max-screen($sm-max) {
+            flex-basis: 100%;
+        }
+        @include max-screen($xxs-max) {
+            min-height: 250px;
+        }
+        @include hover() {
+            .projects__item-bg {
+                transform: scale(1.025);
+            }
+            .projects__item-img {
+                top: 41.6667%;
+            }
+            .projects__item-title {
+                top: 29%;
+            }
+        }
+        &-bg {
+            @extend .absolute;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: scale(1);
+            @include transition();
+        }
+        &-img {
+            position: absolute;
+            top:31.25%;
+            left:5.2vw;
+            right:5.2vw;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 8px;
+            @include transition();
+            box-shadow: 0px 0px 100px 0px rgba(6, 17, 31, 0.56);
+            header {
+                position: relative;
+                background-color: #e4e4e4;
+                height: 12px;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                span {
+                    position: absolute;
+                    top: 3.5px;
+                    left: 3.5px;
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $white;
+                    border-radius: 5px;
+                    &::before,
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        top: 0;
+                        border-radius: 5px;
+                        width: 5px;
+                        height: 5px;
+                        background-color: $white;
+                    }
+                    &::before {
+                        left: 7px;
+                    }
+                    &::after {
+                        left: 14px;
+                    }
+                }
+            }
+        }
+        &-title {
+            position: absolute;
+            top:31.25%;
+            left:5.2vw;
+            right:5.2vw;
+            max-width: 600px;
+            margin: auto;
+            color: $white;
+            font-size: 24px;
+            font-weight: 300;
+            text-align: center;
+            @include transition();
+        }
+    }
+}

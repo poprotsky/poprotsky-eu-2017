@@ -1057,55 +1057,43 @@
     padding: 0 !important;
 }
 
+.padding-top-clear {
+    padding-top: 0 !important;
+}
+
+.padding-right-clear {
+    padding-right: 0 !important;
+}
+
+.padding-bottom-clear {
+    padding-bottom: 0 !important;
+}
+
+.padding-left-clear {
+    padding-left: 0 !important;
+}
+
+
 .margin-clear {
     margin: 0 !important;
 }
 
-.cmt {
-	margin-top: 0 !important;	
+.margin-top-clear {
+    margin-top: 0 !important;
 }
 
-.cmr {
-	margin-right: 0 !important;	
+.margin-right-clear {
+    margin-right: 0 !important;
 }
 
-.cmb {
-	margin-bottom: 0 !important;	
+.margin-bottom-clear {
+    margin-bottom: 0 !important;
 }
 
-.cml {
-	margin-left: 0 !important;	
+.margin-left-clear {
+    margin-left: 0 !important;
 }
 
-.cpt {
-	padding-top: 0 !important;	
-}
-
-.cpr {
-	padding-right: 0 !important;	
-}
-
-.cpb {
-	padding-bottom: 0 !important;	
-}
-
-.cpl {
-	padding-left: 0 !important;	
-}
-
-//
-// clearfix
-//
-.cf {
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
 
 //
 // fullhd limiter
@@ -1134,109 +1122,3 @@
     }
 }
 
-//
-// embed
-//
-.embed-responsive {
-	position: relative;
-	display: block;
-	height: 0;
-	padding: 0;
-	overflow: hidden;
-}
-
-.embed-responsive .embed-responsive-item,
-.embed-responsive iframe,
-.embed-responsive embed,
-.embed-responsive object,
-.embed-responsive video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	height: 100%;
-	width: 100%;
-	border: 0;
-}
-
-.embed-responsive--16by9 {
-	padding-bottom: 56.25%;
-}
-
-.embed-responsive--4by3 {
-	padding-bottom: 75%;
-}
-
-//
-// responsive table
-//
-.table-responsive {
-	overflow-x: auto;
-	min-height: 0.01%;
-
-	@include max-screen($xs-max) {
-		width: 100%;
-		//margin-bottom: $default-margin-bottom;
-		overflow-y: hidden;
-		-ms-overflow-style: -ms-autohiding-scrollbar;
-		border: 1px $key-color-2 solid;
-	}
-
-	table {
-		@include max-screen($xs-max) {
-			min-width: 500px;
-		}
-	}
-}
-
-//
-// preloaders
-//
-*[data-preload] {
-	visibility: hidden;
-
-	&.loaded {
-		visibility: visible;
-	}
-}
-
-*[data-preloader] {
-	height: 500px;
-	overflow: hidden;
-	position: relative;
-
-	@include max-screen($sm-max) {
-		height: 400px;
-	}
-
-	@include max-screen($xs-max) {
-		height: 300px;
-	}
-
-	&:before {
-		@include pseudo;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: 100;
-		background: #fff url("../img/preloader.gif") no-repeat center center;
-	}
-
-	&.loaded {
-		height: auto !important;
-		overflow: visible;
-
-		&:before {
-			display: none;
-		}
-	}
-}
-
-//
-// rwd menu helper
-//
-html.is-menu-open,
-.is-menu-open body {
-	overflow-y: hidden;
-}
