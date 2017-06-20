@@ -26,54 +26,54 @@
     //
 
     // mobile nav (.main-header) is-fixed and hidden
-    .nav-is-fixed & {
-        position: fixed !important;
-        //visibility: hidden;
-        transform: translateY(-100%);
-    }
+    // .nav-is-fixed & {
+    //     position: fixed !important;
+    //     //visibility: hidden;
+    //     transform: translateY(-100%);
+    // }
 
-    // mobile nav (.main-header) is-fixed and is-visible
-    .nav-is-visible & {
-        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.03);
-        padding: 20px 0;
-        background-color: $white;
-        //visibility: visible;
-        transform: translateY(0);
-        @include transition();
-        a {
-        	&:not([class]) {
-        		color: rgba($black, .3);
-        	}
-        	&.active {
-        		color: $black;
-        	}
-        	@include hover() {
-	        	color: $black;
-	        }
-        }
-        .main-header__logo {
-        	color: $black;
-        }
-        @include max-screen($md-max) {
-	        .menu-trigger {
-	            > span {
-	                background-color: $black; 
-	                &::before {
-	                    background-color: $black; 
-	                }
-	                &::after {
-	                    background-color: $black;
-	                }
-	            }
-	        }
-        }
-    }
-    // mobile nav (.main-header) is-hidden
-    .nav-is-hidden & {
-        box-shadow: none;
-        transform: translateY(-100%);
-        @include transition();
-    }
+    // // mobile nav (.main-header) is-fixed and is-visible
+    // .nav-is-visible & {
+    //     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.03);
+    //     padding: 20px 0;
+    //     background-color: $white;
+    //     //visibility: visible;
+    //     transform: translateY(0);
+    //     @include transition();
+    //     a {
+    //     	&:not([class]) {
+    //     		color: rgba($black, .3);
+    //     	}
+    //     	&.active {
+    //     		color: $black;
+    //     	}
+    //     	@include hover() {
+	   //      	color: $black;
+	   //      }
+    //     }
+    //     .main-header__logo {
+    //     	color: $black;
+    //     }
+    //     @include max-screen($md-max) {
+	   //      .menu-trigger {
+	   //          > span {
+	   //              background-color: $black; 
+	   //              &::before {
+	   //                  background-color: $black; 
+	   //              }
+	   //              &::after {
+	   //                  background-color: $black;
+	   //              }
+	   //          }
+	   //      }
+    //     }
+    // }
+    // // mobile nav (.main-header) is-hidden
+    // .nav-is-hidden & {
+    //     box-shadow: none;
+    //     transform: translateY(-100%);
+    //     @include transition();
+    // }
 
     // mobile nav (.main-header) is-open
     .nav-is-open & {

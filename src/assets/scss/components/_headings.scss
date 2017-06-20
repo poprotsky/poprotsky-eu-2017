@@ -59,35 +59,6 @@
             }
         }
     }
-    &__link {
-        @extend .flex, .flex--inline;
-        color: rgba($white, .3);
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: $btn-letter-spacing;
-        font-weight: 500;
-        position: relative;
-        padding-left: 20px;
-        line-height: 1;
-        @include transition();
-        @include hover() {
-            color: $white;
-            animation: right-left 1s ease;
-        }
-        &::before {
-            content: '\e015';
-            position: absolute;
-            font-family: $default-font-family-icon;
-            top:50%;
-            left:0;
-            transform: rotate(180deg) translateY(calc(50% + 1px));
-            margin-right: 10px;
-            font-size: 10px;
-            .firefox & {
-                transform: rotate(180deg) translateY(50%);
-            }
-        }
-    }
     &--large {
         height: 100vh;
         align-items: center !important;

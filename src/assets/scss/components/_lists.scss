@@ -16,6 +16,28 @@
         @include max-screen($xs-max) {
             column-count: 1;
         }
+        li {
+            a {
+                position: relative;
+                color: inherit;
+                @include hover() {
+                    color: $black;
+                    &::before {
+                        background-color: $black;
+                    }
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left:0;
+                    right:0;
+                    height: 1px;
+                    background-color: rgba($key-color-2, .3);
+                    @include transition();
+                }   
+            }
+        }
     }
 
     // 
@@ -135,5 +157,15 @@
                 }
             }
         }
+    }
+}
+
+// used in skills [project page]
+.list-label {
+    display: inline-block;
+    @extend .h6;
+    margin-bottom: 10px;
+    + .list {
+        margin-bottom: 30px;
     }
 }

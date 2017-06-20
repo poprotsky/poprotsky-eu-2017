@@ -28,27 +28,34 @@ $(document).ready(function(){
 
     $(document).scroll(function(){
       $current_scroll_position = $(document).scrollTop();
-      if($current_scroll_position > 0) {
+      var $heading_height = $('.heading').outerHeight();
+
+      if($current_scroll_position > $heading_height) {
         // scroll Bottom
         if ($scroll_var < $current_scroll_position) {
-          $('body').addClass('nav-is-fixed');
-          if($('body').hasClass('nav-is-visible')) {
-            $('body').addClass('nav-is-hidden');
-          }
+          // $('body').addClass('nav-is-fixed');
+          // if($('body').hasClass('nav-is-visible')) {
+          //   $('body').addClass('nav-is-hidden');
+          // }
+          $('body').removeClass('fixed-btn-is-show');
         }
         // scroll Top
         else if ($scroll_var > $current_scroll_position) {
-          $('body').addClass('nav-is-visible');
-          $('body').removeClass('nav-is-hidden');
+          // $('body').addClass('nav-is-visible');
+          // $('body').removeClass('nav-is-hidden');
+          $('body').addClass('fixed-btn-is-show');
         }
       }
       // scrollTop == 0
-      else if($current_scroll_position <= 0){
-        $('body').removeClass('nav-is-fixed nav-is-visible nav-is-hidden');
-        $('.main-header').addClass('transition');
-        setTimeout(function(){
-          $('.main-header').removeClass('transition');
-        }, 300)
+      // else if($current_scroll_position <= 0){
+      //   // $('body').removeClass('nav-is-fixed nav-is-visible nav-is-hidden');
+      //   // $('.main-header').addClass('transition');
+      //   // setTimeout(function(){
+      //   //   $('.main-header').removeClass('transition');
+      //   // }, 300)
+      // }
+      else {
+        $('body').removeClass('fixed-btn-is-show');
       }
       
       $scroll_var = $current_scroll_position;
@@ -66,6 +73,14 @@ $(document).ready(function(){
       }
       return false;
     });
+    // 
+    // back to top
+    // 
+    $('.back-to-top').on('click', function(){
+        $('html, body').animate({
+          scrollTop: $('body').offset().top},
+          500);
+    })
     // 
     // PLUGINS
     //
