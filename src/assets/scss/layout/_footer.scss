@@ -34,8 +34,11 @@
 		}
 		a {
 			color: rgba($white, .4);
+			&::before {
+				content: none !important;
+			}
 			@include hover() {
-				color: $white;
+				color: $white !important;
 			}
 		}
 	}
