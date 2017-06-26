@@ -17,9 +17,16 @@
             column-count: 1;
         }
         li {
+            @include max-screen($sm-max) {
+                font-size: 18px;
+            }
+            @include max-screen($xs-max) {
+                font-size: 16px;
+            }
             a {
                 position: relative;
                 color: inherit;
+                font-size: inherit;
                 @include hover() {
                     color: $black;
                     &::before {
@@ -43,37 +50,6 @@
     // 
     // LIST ALT
     // 
-    // used only list--alt
-    &__title {
-        display: inline-block;
-        @extend .h2;
-        margin-bottom: 0;
-    }
-    // used only list--alt
-    &__subtitle {
-        position: relative;
-        display: inline-block;
-        color: $default-font-color;
-        font-size: 24px;
-        font-weight: 300;
-        &[href] {
-            @include hover() {
-                &::before {
-                    background-color: $black;
-                }
-            }
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left:0;
-                right:0;
-                height: 1px;
-                background-color: rgba($key-color-2, .3);
-                @include transition();
-            }   
-        }
-    }
     &--alt {
         > li {
             @extend .flex, .flex--column;
@@ -95,10 +71,59 @@
             }
         }
     }
+    // used only list--alt
+    &__title {
+        display: inline-block;
+        @extend .h2;
+        margin-bottom: 0;
+        @include max-screen($sm-max) {
+            font-size: 26px;
+        }
+        @include max-screen($xs-max) {
+            font-size: $heading-3-size;
+        }
+    }
+    // used only list--alt
+    &__subtitle {
+        position: relative;
+        display: inline-block;
+        color: $default-font-color;
+        font-size: 24px;
+        font-weight: 300;
+        @include max-screen($sm-max) {
+            font-size: $heading-5-size;
+        }
+        @include max-screen($xs-max) {
+            font-size: 18px;
+        }
+        &[href] {
+            @include hover() {
+                &::before {
+                    background-color: $black;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left:0;
+                right:0;
+                height: 1px;
+                background-color: rgba($key-color-2, .3);
+                @include transition();
+            }   
+        }
+    }
     &--small {
         .list__title,
         .list__subtitle {
             font-size: 20px;
+            @include max-screen($sm-max) {
+                font-size: 18px;
+            }
+            @include max-screen($xs-max) {
+                font-size: 16px;
+            }
         }
     }
     // fonts

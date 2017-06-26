@@ -15,6 +15,9 @@
 			@extend .h4;
 			display: block;
 			color: $white;
+			@include max-screen($xs-max) {
+				margin-bottom: 15px;
+			}
 			a {
 				font-size: 16px;
 				margin-left: 15px;
@@ -40,10 +43,20 @@
 			@include hover() {
 				color: $white !important;
 			}
+			@include max-screen($sm-max) {
+				font-size: 18px;
+			}
+			@include max-screen($xs-max) {
+				font-size: 16px;
+			}
 		}
 	}
 	&__copyright {
-		@extend .flex, .flex--center-y, .flex--nowrap;
+		@extend .flex, .flex--center-y, .flex--nowrap, .flex--space-between;
+		@include max-screen($xs-max) {
+			flex-flow: column wrap;
+			align-items: flex-start;
+		}
 		p {
 			margin-bottom: 0;
 			font-size: 16px;
@@ -64,4 +77,28 @@
 			}
 		}
 	}
+}
+
+.back-to-top {
+    @extend .flex, .flex--center-y;
+    cursor: pointer;
+    color: rgba($white, .4);
+    font-size: 16px;
+    font-weight: 300;
+    @include transition();
+    @include hover() {
+    	color: $white;
+    }
+    @include max-screen($xs-max) {
+		font-size: 14px;
+		margin-top: 50px;
+	}
+    .ico {
+    	margin-right: 10px;
+    	&::before {
+    		display: block;
+    		font-size: 10px;
+    		transform: rotate(-90deg);
+    	}
+    }
 }

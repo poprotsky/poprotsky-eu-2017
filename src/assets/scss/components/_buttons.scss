@@ -170,6 +170,10 @@ $btn-large--font-size: $default-font-size + 2px;
 		background-color: $btn-bg-color--hover;
 		color: $btn-color--hover;
     }
+    @include max-screen($xs-max) {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
 
     // @include max-screen($xxs-max) {
     // 	justify-content: center;

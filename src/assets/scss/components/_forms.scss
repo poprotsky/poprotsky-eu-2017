@@ -26,9 +26,14 @@ textarea {
     color: $default-font-color;
     border: none;
     border-bottom: 2px solid $gray;
+    border-radius: 0;
     outline: none;
     font-family: $default-font-family;
     @include transition();
+    @include max-screen($xs-max) {
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
     &.error {
 	    border-color: $color-decline;
 	}
@@ -57,5 +62,9 @@ form {
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 10px;
+        @include max-screen($xs-max) {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
     }
 }

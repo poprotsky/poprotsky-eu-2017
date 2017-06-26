@@ -7,6 +7,12 @@
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @include max-screen($sm-max) {
+        min-height: 350px;
+    }
+    @include max-screen($xs-max) {
+        min-height: 300px;
+    }
     &::before {
         content: '';
         @extend .absolute;
@@ -22,10 +28,24 @@
         position: relative;
         z-index: 9;
         padding: 50px 0;
+        @include max-screen($sm-max) {
+            padding: 40px 0;
+        }
+        @include max-screen($xs-max) {
+            padding: 30px 0;
+        }
     }
     &__title {
+        @extend .h1;
         color: $white;
         margin-bottom: 0;
+        @include max-screen($sm-max) {
+            font-size: 50px;
+        }
+        @include max-screen($xs-max) {
+            font-size: $heading-2-size;
+            line-height: 1.25;
+        }
         span {
             font-weight: 300;
         }
@@ -37,8 +57,12 @@
         color: rgba($white, .3);
         font-size: 30px;
         margin-bottom: 0;
+        @include max-screen($sm-max) {
+            font-size: 26px;
+        }
         @include max-screen($xs-max) {
             padding-left: 0;
+            font-size: $heading-4-size;
         }
         span {
             opacity: 0;
@@ -62,6 +86,7 @@
     &--large {
         height: 100vh;
         align-items: center !important;
+        min-height: initial;
         .container {
             position: relative;
             height: inherit;

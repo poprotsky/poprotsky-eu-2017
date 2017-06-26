@@ -14,12 +14,6 @@
         height: 20px;
         //background: linear-gradient(to bottom, rgba(#fcfcfc,1) 0%,rgba(#fcfcfc,0) 100%); 
     }
-    &.transition {
-        @include transition();
-    }
-    &--thin {
-        padding: 20px 0;
-    }
 
     //
     // nav statuses
@@ -80,7 +74,7 @@
     	@include max-screen($md-max) {
 	        a {
 	        	&:not([class]) {
-	        		color: rgba($white, .3);
+	        		color: rgba($white, .6);
 	        	}
 	        	&.active {
 	        		color: $white;

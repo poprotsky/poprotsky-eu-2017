@@ -5,10 +5,10 @@
         padding: 100px 0;
     }
     @include max-screen($sm-max) {
-        padding: 70px 0;
+        padding: 80px 0;
     }
     @include max-screen($xs-max) {
-        padding: 50px 0;
+        padding: 60px 0;
     }
 
     &--gray {
@@ -55,6 +55,12 @@
     &__title {
         @extend .h2;
         margin-bottom: 0;
+        @include max-screen($sm-max) {
+            font-size: 26px;
+        }
+        @include max-screen($xs-max) {
+            font-size: $heading-3-size;
+        }
     }
     &__subtitle {
         position: relative;
@@ -63,6 +69,12 @@
         font-weight: 300;
         color: $default-font-color;
         margin-bottom: 50px;
+        @include max-screen($sm-max) {
+            font-size: $heading-5-size;
+        }
+        @include max-screen($xs-max) {
+            font-size: 18px;
+        }
         &[href] {
             @include hover() {
                 &::before {

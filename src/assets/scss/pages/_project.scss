@@ -92,23 +92,49 @@
             }
             header {
                 height: 24px;
+                @include max-screen($sm-max) {
+                    height: 20px;
+                }
+                @include max-screen($xs-max) {
+                    height: 12px;
+                }
                 span {
                     top: 7.5px;
                     left: 7.5px;
                     width: 8px;
                     height: 8px;
                     border-radius: 8px;
+                    @include max-screen($sm-max) {
+                        top: 5.5px;
+                        left: 5.5px;
+                    }
+                    @include max-screen($xs-max) {
+                        width: 5px;
+                        height: 5px;
+                        top: 3.5px;
+                        left: 3.5px;
+                    }
                     &::before,
                     &::after {
                         border-radius: 8px;
                         width: 8px;
                         height: 8px;
+                        @include max-screen($xs-max) {
+                            width: 5px;
+                            height: 5px;
+                        }
                     }
                     &::before {
                         left: 12px;
+                        @include max-screen($xs-max) {
+                            left: 7px;
+                        }
                     }
                     &::after {
                         left: 24px;
+                        @include max-screen($xs-max) {
+                            left: 14px;
+                        }
                     }
                 }
             }
@@ -141,11 +167,25 @@
             background-color: $gray;
             width: 100%;
         }
+        @include max-screen($xs-max) {
+            padding: 60px 0;
+        }
+        > .container {
+            @include max-screen($xs-max) {
+                width: 100%;
+            }
+        }
     }
     &__title {
         @extend .h2;
         margin-bottom: 0;
         padding-right: 30px;
+        @include max-screen($sm-max) {
+            font-size: 26px;
+        }
+        @include max-screen($xs-max) {
+            font-size: $heading-3-size;
+        }
     }
     &__subtitle {
         position: relative;
@@ -154,6 +194,12 @@
         font-weight: 300;
         padding-right: 30px;
         color: $default-font-color;
+        @include max-screen($sm-max) {
+            font-size: $heading-5-size;
+        }
+        @include max-screen($xs-max) {
+            font-size: 18px;
+        }
     }
     &__label {
         @extend .flex, .flex--inline;
