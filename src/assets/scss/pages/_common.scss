@@ -1,3 +1,9 @@
+html {
+    &.nav-is-open {
+        overflow: hidden;
+    }
+}
+
 .lead {
 	font-size: $default-lead-font-size;
     line-height: 1.4;

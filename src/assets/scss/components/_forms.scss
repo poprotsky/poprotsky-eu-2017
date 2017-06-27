@@ -30,9 +30,12 @@ textarea {
     outline: none;
     font-family: $default-font-family;
     @include transition();
+    @include max-screen($sm-max) {
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
     @include max-screen($xs-max) {
         font-size: 16px;
-        padding-bottom: 15px;
     }
     &.error {
 	    border-color: $color-decline;
@@ -62,6 +65,10 @@ form {
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 10px;
+        @include max-screen($sm-max) {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
         @include max-screen($xs-max) {
             font-size: 15px;
             margin-bottom: 0;
