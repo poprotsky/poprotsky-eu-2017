@@ -1,0 +1,12 @@
+.alert--ie {
+    padding: 100px;
+    @include max-screen($xs-max) {
+        padding: 50px;
+    }
+}
+
+.ie {
+    body {
+        padding-top: 0;
+    }
+}

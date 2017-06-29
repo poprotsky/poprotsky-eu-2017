@@ -18,6 +18,7 @@ var gulp = require('gulp'),
             css: 'src/assets/css/*.min.css',
             css_dest: 'src/assets/css',
             main_js: 'src/assets/js/main.js',
+            ie_js: 'src/assets/js/ie.js',
             vendor_scripts: 'src/assets/js/plugins/*.js',
             scripts_dest: 'src/assets/js',
             scripts: 'src/assets/js/*.min.js',
@@ -50,7 +51,7 @@ gulp.task('clean', function(){
 });
 
 // serve
-gulp.task('serve', ['scss-to-css', 'vendor-scripts', 'main-js'], function() {
+gulp.task('serve', ['scss-to-css', 'vendor-scripts', 'main-js', 'ie-js'], function() {
     browserSync.init({
         server: ['src/']
     });
@@ -63,7 +64,7 @@ gulp.task('serve', ['scss-to-css', 'vendor-scripts', 'main-js'], function() {
 
 
 // build
-gulp.task('build', ['clean', 'scss-to-css', 'vendor-scripts', 'main-js'], function(){
+gulp.task('build', ['clean', 'scss-to-css', 'vendor-scripts', 'main-js', 'ie-js'], function(){
     var html = gulp.src(paths.src.html)
         .pipe(gulp.dest(paths.dist.html));
 
@@ -158,4 +159,11 @@ gulp.task('main-js', function(){
         //.pipe(uglify())
         .pipe(gulp.dest(paths.src.scripts_dest))
         .pipe(browserSync.stream());
+});
+
+// ie js
+gulp.task('ie-js', function(){
+    return gulp.src(paths.src.ie_js)
+        .pipe(rename({basename: 'ie', suffix: '.min', extname: '.js'}))
+        .pipe(gulp.dest(paths.src.scripts_dest));
 });

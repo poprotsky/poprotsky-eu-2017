@@ -4,9 +4,9 @@ Authors: Eugene Poprotsky;
 Company: Poprotsky | Eugeniusz Poprocki;
 
 Created date: 2017-06-17; 
-Last update date: 2017-06-26;
+Last update date: 2017-06-29;
 
-Version: 0.4;
+Version: 0.5;
 */
 
 @import
@@ -22,6 +22,7 @@ Version: 0.4;
     'base/_normalize.scss',
     'base/_global.scss',
     'base/_fonts.scss',
+    'base/_ie.scss',
     
 	'components/_alerts.scss',
     'components/_animations.scss',
